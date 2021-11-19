@@ -12,22 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
----
-extends: default
-ignore: |
-  .github/
-  venv
-  .yamllint
-  .pre-commit-config.yaml
+# Labels for action/labeler
 
-rules:
-  braces:
-    max-spaces-inside: 1
-    level: error
-  brackets:
-    max-spaces-inside: 1
-    level: error
-  line-length: disable
-  # NOTE(retr0h): Templates no longer fail this lint rule.
-  #               Uncomment if running old Molecule templates.
-  # truthy: disable
+area/ansible:
+  - defaults/*
+  - tasks/*
+  - handlers/*
+  - vars/*

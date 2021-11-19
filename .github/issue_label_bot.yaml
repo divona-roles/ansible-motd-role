@@ -12,22 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
----
-extends: default
-ignore: |
-  .github/
-  venv
-  .yamllint
-  .pre-commit-config.yaml
-
-rules:
-  braces:
-    max-spaces-inside: 1
-    level: error
-  brackets:
-    max-spaces-inside: 1
-    level: error
-  line-length: disable
-  # NOTE(retr0h): Templates no longer fail this lint rule.
-  #               Uncomment if running old Molecule templates.
-  # truthy: disable
+label-alias:
+  bug: 'kind/bug'
+  feature_request: 'kind/feature'
+  question: 'kind/question'

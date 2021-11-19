@@ -12,22 +12,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
----
-extends: default
-ignore: |
-  .github/
-  venv
-  .yamllint
-  .pre-commit-config.yaml
+# labels to be used with /area command
+area:
+  - 'ansible'
 
-rules:
-  braces:
-    max-spaces-inside: 1
-    level: error
-  brackets:
-    max-spaces-inside: 1
-    level: error
-  line-length: disable
-  # NOTE(retr0h): Templates no longer fail this lint rule.
-  #               Uncomment if running old Molecule templates.
-  # truthy: disable
+kind:
+  - 'documentation'
+  - 'discussion'
+  - 'feature'
+  - 'question'
+
+priority:
+  - 'low'
+  - 'medium'
+  - 'high'
+  - 'critical'
+
+status:
+  - available
+  - blocked
+  - in_progress
+  - on_hold
+
+# File globs for PR labeler
+# tests:
+#   - '**/*.test.ts'
