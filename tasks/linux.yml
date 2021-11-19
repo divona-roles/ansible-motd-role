@@ -13,7 +13,7 @@
 # limitations under the License.
 ---
 - name: Copy banner file
-  template:
+  ansible.builtin.template:
     src: "templates/{{ banner_motd_template }}"
     dest: "{{ banner_motd_file }}"
     owner: root
